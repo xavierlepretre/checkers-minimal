@@ -5,5 +5,6 @@ import "cosmossdk.io/collections"
 const ModuleName = "checkers"
 
 var (
-	ParamsKey = collections.NewPrefix("Params")
+	ParamsKey         = collections.NewPrefix("Params")
+	StoredGameListKey = collections.NewPrefix("StoredGame/value/")
 )

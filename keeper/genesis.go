@@ -12,6 +12,12 @@ func (k *Keeper) InitGenesis(ctx context.Context, data *checkers.GenesisState) e
 		return err
 	}
 
+	for _, storedGame := range data.StoredGameList {
+		if err := k.StoredGameList.Set(ctx, storedGame.Index, storedGame); err != nil {
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -22,7 +28,16 @@ func (k *Keeper) ExportGenesis(ctx context.Context) (*checkers.GenesisState, err
 		return nil, err
 	}
 
+	var storedGames []checkers.StoredGame
+	if err := k.StoredGameList.Walk(ctx, nil, func(index string, storedGame checkers.StoredGame) (bool, error) {
+		storedGames = append(storedGames, storedGame)
+		return false, nil
+	}); err != nil {
+		return nil, err
+	}
+
 	return &checkers.GenesisState{
-		Params: params,
+		Params:         params,
+		StoredGameList: storedGames,
 	}, nil
 }
