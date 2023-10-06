@@ -7,6 +7,7 @@ require (
 	cosmossdk.io/collections v0.4.0
 	cosmossdk.io/core v0.11.0
 	cosmossdk.io/depinject v1.0.0-alpha.4
+	cosmossdk.io/errors v1.0.0
 	github.com/cosmos/cosmos-proto v1.0.0-beta.3
 	github.com/cosmos/cosmos-sdk v0.50.0-rc.1.0.20231005140444-10bd5a2cacdc
 	github.com/cosmos/gogoproto v1.4.11
@@ -15,7 +16,6 @@ require (
 )
 
 require (
-	cosmossdk.io/errors v1.0.0 // indirect
 	cosmossdk.io/log v1.2.1 // indirect
 	cosmossdk.io/math v1.1.3-rc.1 // indirect
 	cosmossdk.io/store v1.0.0-rc.0 // indirect
