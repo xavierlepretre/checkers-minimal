@@ -13,5 +13,11 @@ func (gs *GenesisState) Validate() error {
 		return err
 	}
 
+	for _, game := range gs.StoredGameList {
+		if err := game.Validate(); err != nil {
+			return err
+		}
+	}
+
 	return nil
 }
