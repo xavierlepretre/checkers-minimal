@@ -15,3 +15,14 @@ message GenesisState {
   // params defines all the parameters of the module.
   Params params = 1 [ (gogoproto.nullable) = false, (amino.dont_omitempty) = true ];
 }
+
+message StoredGame {
+  option (amino.name) = "alice/checkers/StoredGame"; 
+
+  string index = 1 ;
+  string board = 2;
+  string turn = 3;
+  string black = 4 [(cosmos_proto.scalar) = "cosmos.AddressString"];
+  string red = 5 [(cosmos_proto.scalar) = "cosmos.AddressString"];
+}
+  
