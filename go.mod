@@ -12,6 +12,7 @@ require (
 	github.com/cosmos/cosmos-sdk v0.50.0-rc.1.0.20231005140444-10bd5a2cacdc
 	github.com/cosmos/gogoproto v1.4.11
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
+	google.golang.org/grpc v1.58.1
 	google.golang.org/protobuf v1.31.0
 )
 
@@ -138,7 +139,6 @@ require (
 	google.golang.org/genproto v0.0.0-20230803162519-f966b187b2e5 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20230726155614-23370e0ffb3e // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230913181813-007df8e322eb // indirect
-	google.golang.org/grpc v1.58.1 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
