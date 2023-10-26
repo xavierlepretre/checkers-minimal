@@ -6,6 +6,7 @@ require (
 	cosmossdk.io/api v0.7.1
 	cosmossdk.io/collections v0.4.0
 	github.com/cosmos/cosmos-proto v1.0.0-beta.3
+	github.com/cosmos/cosmos-sdk v0.50.0-rc.1.0.20231005140444-10bd5a2cacdc
 	github.com/cosmos/gogoproto v1.4.11
 	google.golang.org/protobuf v1.31.0
 )
